@@ -21,6 +21,10 @@ window.addEventListener("load", () => {
                 .then(data => {
                     console.log(data);
                     const { temperature, summary } = data.currently;
+
+                    temperatureDegree.textContent = temperature;
+                    temperatureDescription.textContent = summary;
+                    locationTimezone.textContent = data.timezone;
                 });
         });
     }
